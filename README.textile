@@ -1,0 +1,38 @@
+Textpattern CMS release archive
+
+All releases sourced from "the official Textpattern website":http://www.textpattern.com unless stated.
+
+Includes:
+
+	g117a
+	g118a
+	g119
+	1.0.1rc1
+	1.0rc3
+	4.0.3
+	4.0.4
+	4.0.5
+	4.0.6
+	4.0.7
+	4.0.8
+	4.0.8-rc1
+	4.0.8-rc2
+	4.2.0
+	4.2.0-rc1
+	4.3.0
+	4.3.0-alpha
+	4.3.0-rc1
+	4.4.0
+	4.4.1
+	4.4.1-rc1
+	4.5.0
+	4.5.0-beta
+	4.5.1
+	4.5.2
+	4.5.4
+	4.5.5
+	4.5.7
+
+Still looking for:
+
+	4.5.3 (no longer available from textpattern.com; removed due to a packaging issue)
