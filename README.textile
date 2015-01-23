@@ -33,12 +33,11 @@ Includes:
 * "4.5.0":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.0
 * "4.5.1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.1
 * "4.5.2":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.2
-* "4.5.3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.3 (currently no .tar.gz file)
+* "4.5.3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.3
 * "4.5.4":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.4
 * "4.5.5":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.5
 * "4.5.7":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.7
 
 Still looking for a known-good copy of:
 
-* 4.5.3  (.tar.gz format -- no longer available from textpattern.com; removed due to a packaging issue)
-* …plus any other versions missing from the above list
+* …any versions missing from the above list -- can you help?
