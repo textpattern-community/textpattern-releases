@@ -4,7 +4,7 @@ All publicly-released versions of Textpattern CMS, provided here as an archive.
 
 Includes archived files (primarily .zip, later versions include an additional .tar.gz) plus expanded/uncompressed versions.
 
-Files sourced from the "$":http://www.textpattern.com unless stated.
+Files sourced from the "Textpattern download":http://www.textpattern.com page unless stated.
 
 Includes:
 
