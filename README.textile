@@ -39,5 +39,5 @@ Includes:
 
 Still looking for a known-good copy of:
 
-* 4.5.3 (no longer available from textpattern.com; removed due to a packaging issue)
+* 4.5.3  (.tar.gz format -- no longer available from textpattern.com; removed due to a packaging issue)
 * …plus any other versions missing from the above list
