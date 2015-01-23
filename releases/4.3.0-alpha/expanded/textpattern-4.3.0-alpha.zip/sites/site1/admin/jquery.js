@@ -1,0 +1,1 @@
+link ../../../textpattern/jquery.js
