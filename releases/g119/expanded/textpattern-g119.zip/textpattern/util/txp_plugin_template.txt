@@ -1,0 +1,44 @@
+<?php
+
+	// plugin name must be url-friendly, with no spaces
+	// please prepend the plugin name with a 3-letter developer identifier
+
+$plugin['name'] = 'xxx_myplugin';
+
+$plugin['author'] = 'Your Full Name';
+
+$plugin['author_uri'] = 'http://yoursite.com';
+
+$plugin['version'] = '0.1';
+
+	// short description of the plugin
+
+$plugin['description'] = 'short plaintext description';
+
+	// short helpfile (xhtml) - please be explicit in describing how the plugin
+	// is called, and any parameters that may be edited by the site publisher
+
+$plugin['help'] = '
+
+	<p>Extended help</p>
+	
+';
+
+// The plugin code, as a string. NO PHP open/close tags please
+// Be sure to escape any single quotes
+
+$plugin['code'] = '
+
+	function xxx_myplugin($atts) {
+		
+	}
+
+';
+
+$plugin['md5'] = md5( $plugin['code'] );
+
+// to produce a copy of the plugin for distribution, load this file in a browser. 
+
+echo chr(60)."?php\n\n".'$'."plugin='" . base64_encode(serialize($plugin)) . "'\n?".chr(62);
+
+?>

@@ -1,0 +1,1 @@
+﻿javascript:(window.open('http://textism.local/textpattern/index.php?event=link&step=edit&link=Add&bm=1&linkname='+escape(document.title)+'&url='+escape(window.location.href),'_blank','width=400,height=490,status=yes,resizable=yes,scrollbars=yes')) 
