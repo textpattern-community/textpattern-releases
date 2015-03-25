@@ -1,0 +1,10 @@
+{
+    "name": "Textpattern CMS",
+    "description": "Textpattern is a flexible, elegant and easy-to-use CMS",
+    "properties": {
+        "version": {
+            "type": "4.5.7",
+            },
+        }
+    }
+    
