@@ -4,7 +4,7 @@ All publicly-released versions of Textpattern CMS, provided here as an archive.
 
 Includes archived files (primarily .zip, later versions include an additional .tar.gz) plus expanded/uncompressed versions.
 
-Files sourced from the "Textpattern download":http://www.textpattern.com page unless stated.
+Files sourced from the "Textpattern":http://www.textpattern.com website downloads page unless stated.
 
 Includes:
 
@@ -13,9 +13,9 @@ Includes:
 * "g119":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/g119
 * "1.0.1rc1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/1.0.1rc1
 * "1.0rc3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/1.0rc3
-* "4.0.0":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.0
-* "4.0.1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.1
-* "4.0.2":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.2
+* "4.0.0":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.0 (from "GitHub":https://github.com/textpattern/textpattern/releases?after=4.0.4 - hat tip @vanmelick)
+* "4.0.1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.1 (from "GitHub":https://github.com/textpattern/textpattern/releases?after=4.0.4 - hat tip @vanmelick)
+* "4.0.2":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.2 (from "GitHub":https://github.com/textpattern/textpattern/releases?after=4.0.4 - hat tip @vanmelick)
 * "4.0.3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.3
 * "4.0.4":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.4
 * "4.0.5":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.5
