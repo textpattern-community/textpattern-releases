@@ -13,6 +13,9 @@ Includes:
 * "g119":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/g119
 * "1.0.1rc1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/1.0.1rc1
 * "1.0rc3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/1.0rc3
+* "4.0.0":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.0
+* "4.0.1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.1
+* "4.0.2":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.2
 * "4.0.3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.3
 * "4.0.4":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.4
 * "4.0.5":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.5
