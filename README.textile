@@ -42,3 +42,4 @@ Includes:
 * "4.5.4":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.4
 * "4.5.5":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.5
 * "4.5.7":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.7
+* "4.6.0-beta":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.0-beta
