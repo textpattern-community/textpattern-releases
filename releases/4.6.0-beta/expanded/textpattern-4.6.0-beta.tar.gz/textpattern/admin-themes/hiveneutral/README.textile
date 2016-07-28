@@ -1,0 +1,53 @@
+h1. Hive admin-side theme (Flat Neutral) for Textpattern CMS
+
+You are free to modify this theme, reuse code herein, and distribute all its supporting files as long as licences are respected (see below).
+
+h2. Installation instructions
+
+# Upload the directory 'hive-neutral' into your Textpattern installation -> admin-themes directory.
+# Log in to your Textpattern admin area. Navigate to admin -> preferences -> admin.
+# Select 'Hive (Flat Neutral)' from the 'Admin-side theme' dropdown list. Save the preferences.
+
+h2. Custom CSS toggles
+
+Options are provided to hide certain sections/fields/features from displaying in the admin pages. To use them simply add any of the rules below to your textpattern -> config.php file, before the closing @?>@ line.
+
+*Hide Textpattern branding:*
+
+@define('hive_theme_hide_branding', true);@
+
+*Hide page headings:*
+
+@define('hive_theme_hide_headings', true);@
+
+*Hide preview tabs group (write/edit page):*
+
+@define('hive_theme_hide_preview_tabs_group', true);@
+
+*Hide text filter group (write/edit page):*
+
+@define('hive_theme_hide_textfilter_group', true);@
+
+*Hide advanced group (write/edit page):*
+
+@define('hive_theme_hide_advanced_group', true);@
+
+*Hide recent articles group (write/edit page):*
+
+@define('hive_theme_hide_recent_articles_group', true);@
+
+*Hide keywords field (write/edit page):*
+
+@define('hive_theme_hide_keywords_field', true);@
+
+*Hide comments group (write/edit page):*
+
+@define('hive_theme_hide_comments_group', true);@
+
+*Hide expires fields (write/edit page):*
+
+@define('hive_theme_hide_expires_field', true);@
+
+*Hide image caption field (image edit page):*
+
+@define('hive_theme_hide_image_caption', true);@
