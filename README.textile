@@ -38,7 +38,7 @@ Includes:
 * "4.5.0":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.0
 * "4.5.1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.1
 * "4.5.2":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.2
-* "4.5.3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.3 (.tar.gz via Sourceforge mirror, .zip via community member)
+* "4.5.3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.3 (.tar.gz via Sourceforge mirror, .zip via Textpattern community member)
 * "4.5.4":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.4
 * "4.5.5":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.5
 * "4.5.7":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.5.7
@@ -46,3 +46,4 @@ Includes:
 * "4.6.0-beta.2":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.0-beta.2  (from "GitHub":https://github.com/textpattern/textpattern/releases)
 * "4.6.0-beta.3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.0-beta.3  (from "GitHub":https://github.com/textpattern/textpattern/releases)
 * "4.6.0":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.0  (from "GitHub":https://github.com/textpattern/textpattern/releases)
+* "4.6.1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.1  (from "GitHub":https://github.com/textpattern/textpattern/releases)
