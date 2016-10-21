@@ -47,3 +47,4 @@ Includes:
 * "4.6.0-beta.3":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.0-beta.3  (from "GitHub":https://github.com/textpattern/textpattern/releases)
 * "4.6.0":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.0  (from "GitHub":https://github.com/textpattern/textpattern/releases)
 * "4.6.1":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.1  (from "GitHub":https://github.com/textpattern/textpattern/releases)
+* "4.6.2":https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.6.2  (from "GitHub":https://github.com/textpattern/textpattern/releases)

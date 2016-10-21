@@ -3,7 +3,7 @@
     "description": "Textpattern is a flexible, elegant and easy-to-use CMS",
     "properties": {
         "version": {
-            "number": "4.6.1",
+            "number": "4.6.2",
             },
         }
     }
