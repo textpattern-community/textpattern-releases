@@ -11,36 +11,26 @@ Includes:
 
 | Version | .zip | .tar.gz | Comments |
 |---|:-:|:-:|---|
-| [g118a](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/g118a) |   |   |   |
-| [g119](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/g119) |   |   |   |
-| [1.0rc3](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/1.0rc3) |   |   |   |
+| [g118a](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/g118a) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+| [g119](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/g119) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+| [1.0rc3](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/1.0rc3) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
 | [4.0.0](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.0) |   |   | from [GitHub](https://github.com/textpattern/textpattern/releases?after=4.0.4) - hat tip: [@vanmelick](https://github.com/vanmelick) |
 | [4.0.1](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.1) |   |   | from [GitHub](https://github.com/textpattern/textpattern/releases?after=4.0.4) - hat tip: [@vanmelick](https://github.com/vanmelick) |
 | [4.0.2](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.2) |   |   | from [GitHub](https://github.com/textpattern/textpattern/releases?after=4.0.4) - hat tip: [@vanmelick](https://github.com/vanmelick) |
-|   | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
+|  | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) | [![Download .zip](https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/cloud-download.svg)](#) |  |
 
 
 
 
 
-
-
- (from [GitHub](https://github.com/textpattern/textpattern/releases?after=4.0.4) - hat tip: [@vanmelick](https://github.com/vanmelick))
-(from [GitHub](https://github.com/textpattern/textpattern/releases?after=4.0.4) - hat tip: [@vanmelick](https://github.com/vanmelick))
 [4.0.3](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.3)
 [4.0.4](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.4)
 [4.0.5](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.0.5)
