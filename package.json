@@ -1,9 +1,22 @@
 {
-  "name": "Textpattern CMS",
+  "name": "textpattern",
+  "title": "Textpattern CMS",
+  "version": "4.7.0-beta",
   "description": "Textpattern is a flexible, elegant and easy-to-use CMS.",
-  "properties": {
-    "version": {
-      "number": "4.6.2"
-      }
-    }
- }
+  "author": "Team Textpattern",
+  "homepage": "https://textpattern.com/",
+  "keywords": [
+    "textpattern",
+    "cms",
+    "mysql",
+    "php"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/textpattern/textpattern"
+  },
+  "bugs": {
+    "url": "https://github.com/textpattern/textpattern/issues"
+  },
+  "license": "GPL-2.0"
+}
