@@ -7,6 +7,11 @@ Includes archived files (primarily .zip, later versions include an additional .t
 
 Files sourced from the Textpattern website downloads page unless stated.
 
+Please note:
+
+* `latest.zip` and `latest.tar.gz` archives are most recent production release, not betas or release candidates.
+* `package.json` tracks the most recent production releasse, not betas or release candidates.
+
 Includes:
 
 | Version | .zip | .tar.gz | Announcement | Comments |
