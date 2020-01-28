@@ -1,0 +1,33 @@
+# BEGIN Textpattern
+
+#DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Enable the `FollowSymLinks` option below if it isn't already.
+    #Options +FollowSymlinks
+
+    #RewriteBase /relative/web/path/
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^(.+) - [PT,L]
+
+    RewriteCond %{REQUEST_URI} !=/favicon.ico
+    RewriteRule ^(.*) index.php
+
+    RewriteCond %{HTTP:Authorization}  !^$
+    RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType image/svg+xml  svg svgz
+    AddEncoding gzip       svgz
+</IfModule>
+
+# For additional Apache-compatible web server configuration settings to enhance
+# site performance and security, we recommend:
+# https://github.com/h5bp/server-configs-apache/blob/master/dist/.htaccess
+
+# END Textpattern
