@@ -1,11 +1,10 @@
-Textpattern CMS release archive
-===============================
+# Textpattern CMS release archive
 
 All publicly-released versions of [Textpattern CMS](http://www.textpattern.com), provided here as an archive.
 
 Includes archived files (primarily .zip, later versions include an additional .tar.gz) plus expanded/uncompressed versions.
 
-Files sourced from the Textpattern website downloads page unless stated.
+Legacy versions sourced from the Textpattern website downloads page, GitHub for newer versions unless stated.
 
 Please note:
 
