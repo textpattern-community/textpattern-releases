@@ -4,14 +4,12 @@ All publicly-released versions of [Textpattern CMS](http://www.textpattern.com),
 
 Includes archived files (primarily .zip, later versions include an additional .tar.gz) plus expanded/uncompressed versions.
 
-Legacy versions sourced from the Textpattern website downloads page, GitHub for newer versions unless stated.
-
 Please note:
 
 * `latest.zip` and `latest.tar.gz` archives are the most recent production release, not betas or release candidates.
 * `package.json` tracks the most recent production release, not betas or release candidates.
 
-Includes:
+## Releases
 
 | Version | .zip | .tar.gz | Comments |
 |---|:-:|:-:|---|
