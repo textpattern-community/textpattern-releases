@@ -1,8 +1,8 @@
 <?php
 
 /*
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/setup/txpsql.php $
-$LastChangedRevision: 1185 $
+$HeadURL$
+$LastChangedRevision$
 */
 
 

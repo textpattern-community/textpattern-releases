@@ -9,8 +9,8 @@
 
 	Use of this software indicates acceptance ofthe Textpattern license agreement 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/include/txp_category.php $
-$LastChangedRevision: 1154 $
+$HeadURL$
+$LastChangedRevision$
 
 */
 

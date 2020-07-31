@@ -18,8 +18,8 @@
 
 	Use of this software indicates acceptance of the Textpattern license agreement 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/include/txp_tag.php $
-$LastChangedRevision: 1134 $
+$HeadURL$
+$LastChangedRevision$
 
 */
 	$name = gps('name');

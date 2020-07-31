@@ -1,7 +1,7 @@
 <?php
 /*
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/css.php $
-$LastChangedRevision: 944 $
+$HeadURL$
+$LastChangedRevision$
 */
 
 if (@ini_get('register_globals'))

@@ -13,8 +13,8 @@
 	"Mod File Upload" Copyright 2004 by Michael Manfre. All rights reserved.
 	Use of this mod denotes acceptance of the Textpattern license agreement
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/include/txp_file.php $
-$LastChangedRevision: 1168 $
+$HeadURL$
+$LastChangedRevision$
 
 
 */

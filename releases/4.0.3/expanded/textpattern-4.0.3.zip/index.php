@@ -1,7 +1,7 @@
 <?php
 /*
-$HeadURL: http://svn.textpattern.com/development/4.0/index.php $
-$LastChangedRevision: 804 $
+$HeadURL$
+$LastChangedRevision$
 */
 
 	// Make sure we display all errors that occur during initialization

@@ -9,8 +9,8 @@
 
 	Use of this software indicates acceptance of the Textpattern license agreement 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/include/txp_discuss.php $
-$LastChangedRevision: 1170 $
+$HeadURL$
+$LastChangedRevision$
 
 */
 

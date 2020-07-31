@@ -6,8 +6,8 @@
 
 	Use of this software indicates acceptance of the Textpattern license agreement 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/include/txp_list.php $
-$LastChangedRevision: 1042 $
+$HeadURL$
+$LastChangedRevision$
 
 */
 

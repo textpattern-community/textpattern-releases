@@ -12,8 +12,8 @@
  *	Only the Permission-Settings at the bottom this file are still actively used,
 	and these will be moved to the db before the next release 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/lib/admin_config.php $
-$LastChangedRevision: 877 $
+$HeadURL$
+$LastChangedRevision$
  
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 

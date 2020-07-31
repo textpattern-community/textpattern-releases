@@ -13,8 +13,8 @@
 
 	Use of this software denotes acceptance of the Textpattern license agreement 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/publish.php $
-$LastChangedRevision: 1186 $
+$HeadURL$
+$LastChangedRevision$
 
 */
 

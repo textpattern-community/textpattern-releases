@@ -1,8 +1,8 @@
 <?php
 
 /*
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/include/txp_css.php $
-$LastChangedRevision: 922 $
+$HeadURL$
+$LastChangedRevision$
 */
 
 

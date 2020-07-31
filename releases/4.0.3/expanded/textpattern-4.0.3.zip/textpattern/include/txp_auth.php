@@ -9,8 +9,8 @@ All rights reserved
 
 Use of this software indicates acceptance of the Textpattern license agreement 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/include/txp_auth.php $
-$LastChangedRevision: 1166 $
+$HeadURL$
+$LastChangedRevision$
 
 */
 

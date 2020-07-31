@@ -6,8 +6,8 @@
 
 	Use of this software denotes acceptance of the Textpattern license agreement 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/publish/atom.php $
-$LastChangedRevision: 1117 $
+$HeadURL$
+$LastChangedRevision$
 
 */
 

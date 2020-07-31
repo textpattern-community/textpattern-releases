@@ -1,8 +1,8 @@
 <?php
 
 /*
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/lib/taglib.php $
-$LastChangedRevision: 628 $
+$HeadURL$
+$LastChangedRevision$
 */
 
 $article_tags = array(

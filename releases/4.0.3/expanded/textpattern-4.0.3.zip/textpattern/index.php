@@ -9,8 +9,8 @@
 
 	Use of this software indicates acceptance of the Textpattern license agreement 
 
-$HeadURL: http://svn.textpattern.com/development/4.0/textpattern/index.php $
-$LastChangedRevision: 1172 $
+$HeadURL$
+$LastChangedRevision$
 
 */
 	if (@ini_get('register_globals'))
