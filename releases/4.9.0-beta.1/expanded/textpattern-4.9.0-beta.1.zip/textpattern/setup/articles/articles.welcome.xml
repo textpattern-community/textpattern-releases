@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<articles>
+<article>
+    <title>Welcome to Textpattern</title>
+    <section>articles</section>
+    <category>hope-for-the-future</category>
+    <category>meaningful-labor</category>
+    <body format="textile"><![CDATA[This is the Textpattern welcome article. You can delete or edit it and then start creating your own content.
+
+"Textpattern in two minutes":https://textpattern.com/two-minutes provides an overview of Textpattern. "Textpattern user documentation":https://docs.textpattern.com/ provides more detailed information.]]></body>
+    <excerpt format="textile"><![CDATA[This is an excerpt for the welcome article.]]></excerpt>
+    <comment>
+        <name>Donald Swain</name>
+        <email>donald.swain@example.com</email>
+        <web>https://docs.textpattern.com/brand/donald-swain</web>
+        <message><![CDATA[<p>I enjoy your site very much.</p>]]></message>
+    </comment>
+</article>
+</articles>
+</resources>
