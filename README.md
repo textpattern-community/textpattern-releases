@@ -2,7 +2,7 @@
 
 All publicly-released versions of [Textpattern CMS](http://www.textpattern.com), provided here as an archive. Includes official release files with expanded / unpacked file tree of these archives.
 
-'Repack' archives are official releases optimized for compression (i.e. smaller file sizes). The archive contents are identical to the official release.
+'Repack' archives are compression optimized (i.e. smaller archive file sizes) built from official releases. The archive contents are identical to the official release. These repack archives are *unofficial* releases and provided as a courtesy / convenience.
 
 Where an official release is not available in a specific archive format, a repack archive is available or planned.
 
