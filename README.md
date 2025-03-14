@@ -11,9 +11,9 @@ Please note:
 
 ## Releases
 
-| Version | Announcement | .zip | .tar.gz | .tar.xz |
-|---|:-:|:-:|:-:|:-:|
-| Textpattern CMS 4.9.0 beta.2 | Testing | .zip | .tar.gz | – |
+| Version | Announcement | .zip | .tar.gz | .tar.xz | GitHub tag |
+|---|:-:|:-:|:-:|:-:|:-:|
+| Textpattern CMS 4.9.0-beta.2 |  | .zip | .tar.gz | .tar.xz | https://github.com/textpattern/textpattern/releases/tag/4.9.0-beta.2 |
 
 
 | Version | .zip | .tar.gz |
