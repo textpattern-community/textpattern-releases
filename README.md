@@ -11,6 +11,11 @@ Please note:
 
 ## Releases
 
+| Version | Announcement | .zip | .tar.gz | .tar.xz |
+|---|:-:|:-:|:-:|:-:|
+| Testing | Testing | .zip | .tar.gz | .tar.xz |
+
+
 | Version | .zip | .tar.gz |
 |---|:-:|:-:|
 | [4.8.8](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.8.8) | [![Download .zip](https://raw.githubusercontent.com/primer/octicons/master/icons/desktop-download-16.svg)](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.8.8/archives/textpattern-4.8.8.zip) | [![Download .tar.gz](https://raw.githubusercontent.com/primer/octicons/master/icons/desktop-download-16.svg)](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.8.8/archives/textpattern-4.8.8.tar.gz) |
