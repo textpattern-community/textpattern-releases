@@ -13,7 +13,7 @@ Please note:
 
 | Version | Announcement | .zip | .tar.gz | .tar.xz |
 |---|:-:|:-:|:-:|:-:|
-| Testing | Testing | .zip | .tar.gz | .tar.xz |
+| Textpattern CMS 4.9.0 beta.2 | Testing | .zip | .tar.gz | – |
 
 
 | Version | .zip | .tar.gz |
