@@ -13,7 +13,7 @@ Please note:
 
 ## Releases
 
-<td colspan="2">&nbsp;</td><td colspan="3">Official</td><td>&nbsp;</td>
+| Version | Notes | .zip | .tar.gz | .tar.xz | GitHub |
 | Version | Notes | .zip | .tar.gz | .tar.xz | GitHub |
 |---|:-:|:-:|:-:|:-:|:-:|
 | [Textpattern CMS 4.9.0-beta.2](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.9.0-beta.2) | [Blog](https://textpattern.com/weblog/textpattern-490-beta2-released) | [Download](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.zip) [<sup>sum</sup>](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.zip.SHA256SUM) | [Download](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.gz) [<sup>sum</sup>](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.gz.SHA256SUM) | [Download](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.xz) [<sup>sum</sup>](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.xz.SHA256SUM) | [Repo tag](https://github.com/textpattern/textpattern/releases/tag/4.9.0-beta.2) |
