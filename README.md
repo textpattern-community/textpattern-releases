@@ -11,9 +11,9 @@ Please note:
 
 ## Releases
 
-| Version | Announcement | .zip | .tar.gz | .tar.xz | GitHub |
+| Version | Notes | .zip | .tar.gz | .tar.xz | GitHub |
 |---|:-:|:-:|:-:|:-:|:-:|
-| Textpattern CMS 4.9.0-beta.2 |  | .zip | .tar.gz | .tar.xz | [Repo tag](https://github.com/textpattern/textpattern/releases/tag/4.9.0-beta.2) |
+| Textpattern CMS 4.9.0-beta.2 | [Blog](https://textpattern.com/weblog/textpattern-490-beta2-released) | .zip | [.tar.gz](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.gz) [SHA256SUM](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.gz.SHA256SUM) | .tar.xz | [Repo tag](https://github.com/textpattern/textpattern/releases/tag/4.9.0-beta.2) |
 
 
 | Version | .zip | .tar.gz |
