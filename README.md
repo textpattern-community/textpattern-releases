@@ -2,7 +2,9 @@
 
 All publicly-released versions of [Textpattern CMS](http://www.textpattern.com), provided here as an archive.
 
-Includes archived files (primarily .zip, later versions include an additional .tar.gz) plus expanded/uncompressed versions.
+Includes official archived files (.zip; .tar.gz where available; .tar.xz where available) plus expanded / unpacked file tree of these archives.
+
+'Repack' archives are official releases optimized for compression (i.e. smaller file sizes). The archive contents are identical to the official release.
 
 Please note:
 
@@ -15,6 +17,7 @@ Please note:
 |---|:-:|:-:|:-:|:-:|:-:|
 | [Textpattern CMS 4.9.0-beta.2](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.9.0-beta.2) | [Blog](https://textpattern.com/weblog/textpattern-490-beta2-released) | [.zip](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.zip) [SHA256](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.zip.SHA256SUM) | [.tar.gz](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.gz) [SHA256](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.gz.SHA256SUM) | [.tar.xz](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.xz) [SHA256](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.2/archives/textpattern-4.9.0-beta.2.tar.xz.SHA256SUM) | [Repo tag](https://github.com/textpattern/textpattern/releases/tag/4.9.0-beta.2) |
 | [Textpattern CMS 4.9.0-beta.1](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.9.0-beta.1) | [Blog](https://textpattern.com/weblog/textpattern-490-beta1-released-php-84-mysql-84-features-fixes-and-more) | [.zip](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.1/archives/textpattern-4.9.0-beta.1.zip) [SHA256](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.1/archives/textpattern-4.9.0-beta.1.zip.SHA256SUM) | [.tar.gz](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.1/archives/textpattern-4.9.0-beta.1.tar.gz) [SHA256](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.9.0-beta.1/archives/textpattern-4.9.0-beta.1.tar.gz.SHA256SUM) | – | [Repo tag](https://github.com/textpattern/textpattern/releases/tag/4.9.0-beta.1a) |
+| [Textpattern CMS 4.8.8](https://github.com/textpattern-community/textpattern-releases/tree/master/releases/4.8.8) | [Blog](https://textpattern.com/weblog/textpattern-488-released-php-81-support-security-fix-and-more) | [.zip](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.8.8/archives/textpattern-4.8.8.zip) [SHA256](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.8.8/archives/textpattern-4.8.8.zip.SHA256SUM) | [.tar.gz](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.8.8/archives/textpattern-4.8.8.tar.gz) [SHA256](https://github.com/textpattern-community/textpattern-releases/blob/master/releases/4.8.8/archives/textpattern-4.8.8.tar.gz.SHA256SUM) | – | [Repo tag](https://github.com/textpattern/textpattern/releases/tag/4.8.8) |
 
 
 | Version | .zip | .tar.gz |
