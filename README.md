@@ -4,11 +4,11 @@ All publicly-released versions of [Textpattern CMS](http://www.textpattern.com),
 
 'Repack' archives are compression optimized (i.e. smaller archive file sizes) built from official releases. The archive contents are identical to the official release. These repack archives are *unofficial* releases and provided here as a courtesy / convenience.
 
-Where an official release is not available in a specific archive format, a repack archive is available or planned.
+Where an official release is not available in a specific archive format, a repack archive is available or planned. Repack archives may include archive formats other than those used by Team Textpattern.
 
 Please note:
 
-* `latest.zip` and `latest.tar.gz` archives are the most recent production release, not betas or release candidates.
+* `latest.*` archives are the most recent production release, not betas or release candidates.
 * `package.json` tracks the most recent production release, not betas or release candidates.
 
 ## Releases
