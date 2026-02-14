@@ -1,0 +1,621 @@
+<?php
+
+/*
+ * Textpattern Content Management System
+ * https://textpattern.com/
+ *
+ * Copyright (C) 2026 The Textpattern Development Team
+ *
+ * This file is part of Textpattern.
+ *
+ * Textpattern is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation, version 2.
+ *
+ * Textpattern is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Textpattern. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/**
+ * Image tags.
+ *
+ * @since  4.9.0
+ */
+
+namespace Textpattern\Tag\Syntax;
+
+class Image
+{
+    public static function thumbnail($atts)
+    {
+        return self::image($atts + array('thumbnail' => null));
+    }
+
+    // -------------------------------------------------------------
+
+    public static function image($atts)
+    {
+        global $doctype, $txp_atts;
+        static $tagAtts = array(
+            'escape'    => true,
+            'alt'       => null,
+            'title'     => '',
+            'class'     => '',
+            'crop'      => '',
+            'html_id'   => '',
+            'height'    => '0',
+            'id'        => '',
+            'link'      => 0,
+            'link_rel'  => '',
+            'loading'   => null,
+            'name'      => '',
+            'poplink'   => 0, // Deprecated, 4.7
+            'quality'   => '',
+            'wraptag'   => '',
+            'width'     => '0',
+            'type'      => '',
+            'thumbnail' => false,
+        );
+
+        $extAtts = join_atts(array_diff_key($atts, $tagAtts + ($txp_atts ? $txp_atts : array())), TEXTPATTERN_STRIP_EMPTY_STRING|TEXTPATTERN_STRIP_TXP);
+        $atts = array_intersect_key($atts, $tagAtts);
+
+        extract(lAtts($tagAtts, $atts));
+
+        $thumb_type = $thumbnail; // Because $thumbnail is overwritten by extracting imageFetchInfo();
+
+        if (isset($atts['poplink'])) {
+            trigger_error(gTxt('deprecated_attribute', array('{name}' => 'poplink')), E_USER_NOTICE);
+        }
+
+        if ($imageData = imageFetchInfo($id, $name)) {
+            $colPrefix = $thumbnail == THUMB_CUSTOM || !isset($thumbnail) ? 'thumb_' : '';
+
+            if ($colPrefix && empty($imageData['thumbnail'])) {
+                $colPrefix = '';
+
+                if (!isset($thumbnail)) {
+                    return;
+                }
+            }
+
+            if ($alt === true) {
+                $imageData['alt'] !== '' or $imageData['alt'] = $imageData['name'];
+            } elseif (isset($alt)) {
+                $imageData['alt'] = $alt;
+            }
+
+            extract($imageData);
+
+            if ($escape) {
+                $alt = txp_escape($escape, $alt);
+            }
+
+            if ($title === true) {
+                $title = $caption;
+            }
+
+            $payload = array(
+                'id' => $id,
+                'ext' => $ext,
+            );
+
+            $isAuto = $thumbnail == THUMB_AUTO || $thumb_type == THUMB_AUTO;
+            $width = ($width == '' || $width === true ? (($colPrefix && $thumb_w) ? ${$colPrefix.'w'} : $w) : $width);
+            $height = ($height == '' || $height === true ? (($colPrefix && $thumb_h) ? ${$colPrefix.'h'} : $h) : $height);
+
+            if ($isAuto) {
+                $crop = ($crop === true ? '1x1' : $crop);
+            }
+
+            if ($isAuto) {
+                $payload['w'] = $width;
+                $payload['h'] = $height;
+                $payload['c'] = $crop;
+                $payload['q'] = $quality;
+                $payload['t'] = $type;
+            }
+
+            $thumb_wanted = ($thumb_type === null ? $thumbnail : $thumb_type);
+
+            $out = '<img src="'.imageBuildURL($payload, $thumb_wanted).
+                '" alt="'.txpspecialchars($alt, ENT_QUOTES, 'UTF-8', false).'"';
+
+            if ($title) {
+                $out .= ' title="'.txpspecialchars($title, ENT_QUOTES, 'UTF-8', false).'"';
+            }
+
+            if ($html_id && !$wraptag) {
+                $out .= ' id="'.txpspecialchars($html_id).'"';
+            }
+
+            if ($class && !$wraptag) {
+                $out .= ' class="'.txpspecialchars($class).'"';
+            }
+
+            if ($width) {
+                $out .= ' width="'.(int) $width.'"';
+            }
+
+            if ($height) {
+                $out .= ' height="'.(int) $height.'"';
+            }
+
+            if ($loading && $doctype === 'html5' && in_array($loading, array('auto', 'eager', 'lazy'))) {
+                $out .= ' loading="'.$loading.'"';
+            }
+
+            $out .= $extAtts.(get_pref('doctype') === 'html5' ? '>' : ' />');
+
+            if ($link && $colPrefix) {
+                $attribs = '';
+
+                if (!empty($link_rel)) {
+                    $attribs .= " rel='".txpspecialchars($link_rel)."'";
+                }
+
+                $out = href($out, imageBuildURL($payload, $thumb_wanted), $attribs);
+            } elseif ($poplink) {
+                $out = '<a href="'.imageBuildURL($payload, $thumb_wanted).'"'.
+                    ' onclick="window.open(this.href, \'popupwindow\', '.
+                    '\'width='.$w.', height='.$h.', scrollbars, resizable\'); return false;">'.$out.'</a>';
+            }
+
+            return $wraptag ? doTag($out, $wraptag, $class, '', $html_id) : $out;
+        }
+    }
+
+    // -------------------------------------------------------------
+
+    public static function image_index($atts)
+    {
+        trigger_error(gTxt('deprecated_tag'), E_USER_NOTICE);
+
+        global $c;
+
+        lAtts(array(
+            'break'    => 'br',
+            'wraptag'  => '',
+            'class'    => __FUNCTION__,
+            'category' => $c,
+            'limit'    => 0,
+            'offset'   => 0,
+            'sort'     => 'name ASC',
+        ), $atts);
+
+        if (!isset($atts['category'])) {
+            $atts['category'] = $c;
+        }
+
+        if (!isset($atts['class'])) {
+            $atts['class'] = __FUNCTION__;
+        }
+
+        if ($atts['category']) {
+            return self::images($atts);
+        }
+
+        return '';
+    }
+
+    // -------------------------------------------------------------
+
+    public static function image_display($atts)
+    {
+        trigger_error(gTxt('deprecated_tag'), E_USER_NOTICE);
+
+        global $p;
+
+        if ($p) {
+            return self::image(array('id' => $p, 'thumbnail' => false));
+        }
+    }
+
+    // -------------------------------------------------------------
+
+    public static function images($atts, $thing = null)
+    {
+        global $s, $c, $context, $thisimage, $thisarticle, $thispage, $prefs, $pretext;
+
+        $filters = isset($atts['id'])
+            || isset($atts['name'])
+            || isset($atts['category'])
+            || isset($atts['author'])
+            || isset($atts['realname'])
+            || isset($atts['extension'])
+            || isset($atts['size'])
+            || isset($atts['month'])
+            || isset($atts['time']);
+
+        extract(lAtts(array(
+            'name'        => '',
+            'id'          => '',
+            'category'    => '',
+            'author'      => '',
+            'realname'    => '',
+            'extension'   => '',
+            'thumbnail'   => true,
+            'size'        => '',
+            'month'       => '',
+            'time'        => null,
+            'exclude'     => '',
+            'auto_detect' => $filters ? '' : 'article, category, author',
+            'break'       => 'br',
+            'wraptag'     => '',
+            'class'       => __FUNCTION__,
+            'html_id'     => '',
+            'form'        => '',
+            'pageby'      => '',
+            'limit'       => 0,
+            'offset'      => 0,
+            'sort'        => 'name ASC',
+        ), $atts));
+
+        $safe_sort = sanitizeForSort($sort);
+        $where = array();
+        $has_content = isset($thing) || $form;
+        ($has_content || $thumbnail) or $thumbnail = null;
+        $context_list = empty($auto_detect) ? array() : do_list_unique($auto_detect);
+        $pageby = ($pageby == 'limit') ? $limit : $pageby;
+        $exclude === true or $exclude = $exclude ? do_list_unique($exclude) : array();
+
+        if ($exclude && is_array($exclude) && $excluded = array_filter($exclude, function($e) {
+            return preg_match('/^\d+(?:\s*\-\s*\d+)?$/', $e);
+        })) {
+            foreach ($excluded as $value) {
+                list($start, $end) = explode('-', $value) + array(null, null);
+                $where[] = isset($end) ? "id NOT BETWEEN $start AND $end" : "id != $start";
+            }
+
+            $exclude = array_diff($exclude, $excluded);
+        }
+
+        if ($name) {
+            $not = $exclude === true || in_array('name', $exclude) ? ' NOT' : '';
+            $where[] = "name$not IN ('".join("','", doSlash(do_list_unique($name)))."')";
+        }
+
+        $category = $category ?
+            do_list_unique($category) :
+            ($context == 'image' && !empty($c) && in_array('category', $context_list) ? array($c) : array());
+
+        if ($category) {
+            $catquery = array();
+
+            foreach ($category as $cat) {
+                $catquery[] = "category LIKE '".strtr(doSlash($cat), array('_' => '\_', '*' => '_'))."'";
+            }
+
+            $not = $exclude === true || in_array('category', $exclude) ? 'NOT ' : '';
+            $where[] = $not.'('.implode(' OR ', $catquery).')';
+        }
+
+        $author = $author ?: ($context == 'image' && !empty($pretext['author']) && in_array('author', $context_list) ? array($pretext['author']) : array());
+
+        if ($author) {
+            $not = $exclude === true || in_array('author', $exclude) ? ' NOT' : '';
+            $where[] = "author$not IN ('".join("','", doSlash(do_list_unique($author)))."')";
+        }
+
+        if ($realname) {
+            $authorlist = safe_column("name", 'txp_users', "RealName IN ('".join("','", doArray(doSlash(do_list_unique($realname)), 'urldecode'))."')");
+            if ($authorlist) {
+                $not = $exclude === true || in_array('realname', $exclude) ? ' NOT' : '';
+                $where[] = "author$not IN ('".join("','", doSlash($authorlist))."')";
+            }
+        }
+
+        // Handle extensions, with or without the leading dot.
+        if ($extension) {
+            $not = $exclude === true || in_array('extension', $exclude) ? ' NOT' : '';
+            $where[] = "ext$not IN ('".join("','", doSlash(do_list_unique(preg_replace('/(?<!\.)\b(\w)/', '.$1', $extension))))."')";
+        }
+
+        if ($thumbnail === THUMB_NONE || $thumbnail === THUMB_CUSTOM || $thumbnail === THUMB_AUTO) {
+            $where[] = "thumbnail = $thumbnail";
+        }
+
+        // Handle aspect ratio filtering.
+        if ($size) {
+            $sizes = array();
+
+            foreach (do_list_unique($size) as $size) {
+                if ($size === 'portrait') {
+                    $sizes[] = "h > w";
+                } elseif ($size === 'landscape') {
+                    $sizes[] = "w > h";
+                } elseif ($size === 'square') {
+                    $sizes[] = "w = h";
+                } elseif (is_numeric($size)) {
+                    $sizes[] = "ROUND(w/h, 2) = $size";
+                } elseif (strpos($size, ':') !== false) {
+                    $ratio = explode(':', $size);
+                    $ratiow = $ratio[0];
+                    $ratioh = !empty($ratio[1]) ? $ratio[1] : '';
+
+                    if (is_numeric($ratiow) && is_numeric($ratioh)) {
+                        $sizes[] = "ROUND(w/h, 2) = ".round($ratiow/$ratioh, 2);
+                    } elseif (is_numeric($ratiow)) {
+                        $sizes[] = "w = $ratiow";
+                    } elseif (is_numeric($ratioh)) {
+                        $sizes[] = "h = $ratioh";
+                    }
+                }
+            }
+
+            if ($sizes) {
+                $not = $exclude === true || in_array('size', $exclude) ? 'NOT ' : '';
+                $where[] = $not.'('.join(' OR ', $sizes).')';
+            }
+        }
+
+        if ($time || $month) {
+            $not = $exclude === true || in_array('month', $exclude) || in_array('time', $exclude) ? 'NOT ' : '';
+            $where[] = $not.'('.buildTimeSql($month, $time === null ? 'past' : $time, 'date').')';
+        }
+
+        $id = $id === true || empty($id) && in_array('article', $context_list) ?
+            (empty($thisarticle['article_image']) ? 0 : $thisarticle['article_image']) :
+            $id;
+
+        if ($id) {
+            $not = $exclude === true || in_array('id', $exclude) ? ' NOT' : '';
+            $ids = $extid = $numid = array();
+
+            foreach (do_list_unique($id, array(',', '-')) as $id) {
+                if (preg_match('/^\d+$/', $id)) {
+                    $ids[] = $numid[] = $id;
+                } elseif (!$not) {
+                    $ids[] = doQuote(doSlash($id));
+                    $fields = array();
+                    foreach (imageFetchInfo($id) as $k => $v) {
+                        $v = is_string($v) ? "'".doSlash($v)."'" : (is_null($v) ? 'NULL' : $v);
+                        $fields[] = "$v AS $k";
+                    }
+                    $extid[] = implode(',', $fields);
+                }
+            }
+
+            $extnum = count($extid);
+            $extid = implode(' UNION ALL SELECT ', $extid);
+
+            if ($extid && $where) {
+                $extid = "* FROM (SELECT $extid) AS extid WHERE ".implode(' AND ', $where);
+                $extcount = "SELECT COUNT(*)".ltrim($extid, '*');
+            }
+
+            $numid = join(",", array_filter($numid));
+            $id = implode(',', $ids);
+
+            // Note: This clause will squash duplicate ids.
+            $where[] = $numid ? "id{$not} IN ($numid)" : ($not ? '1' : '0');
+        }
+
+        if (!$where && $filters) {
+            // If nothing matches from the filterable attributes, output nothing.
+            return isset($thing) ? parse($thing, false) : '';
+        }
+
+        if ($time === null && !$month) {
+            $where[] = buildTimeSql($month, 'past', 'date');
+        }
+
+        $where = $where ? join(" AND ", $where) : '1';
+
+        // Order of ids in 'id' attribute overrides default 'sort' attribute.
+        if (empty($atts['sort']) && $id) {
+            $safe_sort = "FIELD(id, $id)";
+        }
+
+        // Set up paging if required.
+        if ($limit && $pageby) {
+            $pg = (!$pretext['pg']) ? 1 : $pretext['pg'];
+            $pgoffset = $offset + (($pg - 1) * $pageby);
+
+            if (empty($thispage)) {
+                $grand_total = safe_count('txp_image', $where) + (empty($extnum) ? 0 : (empty($extcount) ? $extnum : getThing($extcount)));
+                $total = $grand_total - $offset;
+                $numPages = ($pageby > 0) ? ceil($total / $pageby) : 1;
+
+                // Send paging info to txp:newer and txp:older.
+                $pageout['pg']          = $pg;
+                $pageout['numPages']    = $numPages;
+                $pageout['s']           = $s;
+                $pageout['c']           = $c;
+                $pageout['context']     = 'image';
+                $pageout['grand_total'] = $grand_total;
+                $pageout['total']       = $total;
+                $thispage = $pageout;
+            }
+        } else {
+            $pgoffset = $offset;
+        }
+
+        $qparts = join(' ', array(
+            $where ? $where : '',
+            "ORDER BY ".$safe_sort,
+            ($limit) ? "LIMIT ".intval($pgoffset).", ".intval($limit) : '',
+        ));
+
+        $rs = empty($extid) ?
+            safe_rows_start("*", 'txp_image', $qparts) :
+            ($where ?
+                safe_rows_start("$extid UNION ALL SELECT *", 'txp_image', $qparts) :
+                safe_query("SELECT $extid $qparts")
+            );
+
+        if (!$has_content) {
+            $url = "<txp:page_url context='s, c, p' c='<txp:image_info type=\"category\" />' p='<txp:image_info type=\"id\" escape=\"\" />' />&amp;context=image";
+            $thumb = !isset($thumbnail) ? 0 : ($thumbnail !== true ? 1 : '<txp:image_info type="thumbnail" escape="" />');
+            $thing = '<a href="'.$url.'"><txp:image thumbnail=\''.$thumb.'\' /></a>';
+        }
+
+        $out = parseList($rs, $thisimage, 'image_format_info', compact('form', 'thing'));
+
+        return empty($out) ?
+            (isset($thing) ? parse($thing, false) : '') :
+            doWrap($out, $wraptag, compact('break', 'class', 'html_id'));
+    }
+
+    // -------------------------------------------------------------
+
+    public static function image_info($atts)
+    {
+        extract(lAtts(array(
+            'name'       => '',
+            'id'         => '',
+            'type'       => 'caption',
+            'escape'     => true,
+            'wraptag'    => '',
+            'class'      => '',
+            'break'      => '',
+        ), $atts));
+
+        $validItems = array('id', 'name', 'category', 'category_title', 'alt', 'caption', 'ext', 'mime', 'author', 'w', 'h', 'thumbnail', 'thumb_w', 'thumb_h', 'date');
+        $type = do_list($type);
+
+        $out = array();
+
+        if ($imageData = imageFetchInfo($id, $name)) {
+            foreach ($type as $item) {
+                if (in_array($item, $validItems)) {
+                    if ($item === 'category_title') {
+                        $imageData['category_title'] = fetch_category_title($imageData['category'], 'image');
+                    }
+
+                    if (isset($imageData[$item])) {
+                        $out[] = $escape ? txp_escape($escape, $imageData[$item]) : $imageData[$item];
+                    }
+                } else {
+                    trigger_error(gTxt('invalid_attribute_value', array('{name}' => $item)), E_USER_NOTICE);
+                }
+            }
+        }
+
+        return doWrap($out, $wraptag, $break, $class);
+    }
+
+    // -------------------------------------------------------------
+
+    public static function image_url($atts, $thing = null)
+    {
+        extract(lAtts(array(
+            'name'      => '',
+            'id'        => '',
+            'thumbnail' => 0,
+            'link'      => 'auto',
+            'width'     => '0',
+            'height'    => '0',
+            'crop'      => '',
+            'quality'   => '',
+            'type'      => '',
+        ), $atts));
+
+        $thumbnail = !$thumbnail ? null : $thumbnail;
+
+        if (($name || $id) && $thing) {
+            global $thisimage;
+            $stash = $thisimage;
+        }
+
+        if ($thisimage = imageFetchInfo($id, $name)) {
+            $width = ($width == '' || $width === true ? ($thumbnail && $thisimage['thumb_w'] ? $thisimage['thumb_w'] : $thisimage['w']) : $width);
+            $height = ($height == '' || $height === true ? ($thumbnail && $thisimage['thumb_h'] ? $thisimage['thumb_h'] : $thisimage['h']) : $height);
+            $crop = ($crop === true ? '1x1' : $crop);
+
+            if ($thumbnail == THUMB_AUTO || $width || $height || $crop) {
+                $thisimage['w'] = $width;
+                $thisimage['h'] = $height;
+                $thisimage['c'] = $crop;
+                $thisimage['q'] = $quality;
+                $thisimage['t'] = $type;
+            } elseif ($thumbnail == THUMB_CUSTOM) {
+                // Leave only thumb_w and thumb_h for the builder to use.
+                $thisimage['w'] = '';
+                $thisimage['h'] = '';
+            }
+
+            $url = imageBuildURL($thisimage, $thumbnail);
+            $link = ($link == 'auto') ? (($thing) ? 1 : 0) : $link;
+            $out = ($thing) ? parse($thing) : $url;
+            $out = ($link) ? href($out, $url) : $out;
+        }
+
+        if (isset($stash)) {
+            $thisimage = $stash;
+        }
+
+        return isset($out) ? $out : '';
+    }
+
+    // -------------------------------------------------------------
+
+    public static function image_author($atts)
+    {
+        global $s;
+
+        extract(lAtts(array(
+            'name'         => '',
+            'id'           => '',
+            'link'         => 0,
+            'title'        => 1,
+            'section'      => '',
+            'this_section' => '',
+        ), $atts));
+
+        if ($imageData = imageFetchInfo($id, $name)) {
+            $author_name = get_author_name($imageData['author']);
+            $display_name = txpspecialchars(($title) ? $author_name : $imageData['author']);
+    
+            $section = ($this_section) ? ($s == 'default' ? '' : $s) : $section;
+
+            $author = ($link)
+                ? href($display_name, pagelinkurl(array(
+                    's'       => $section,
+                    'author'  => $author_name,
+                    'context' => 'image',
+                )))
+                : $display_name;
+
+            return $author;
+        }
+    }
+
+    // -------------------------------------------------------------
+
+    public static function image_date($atts)
+    {
+        extract(lAtts(array(
+            'name'   => '',
+            'id'     => '',
+            'format' => '',
+        ), $atts));
+
+        if ($imageData = imageFetchInfo($id, $name)) {
+            // Not a typo: use fileDownloadFormatTime() since it's fit for purpose.
+            $out = fileDownloadFormatTime(array(
+                'ftime'  => $imageData['date'],
+                'format' => $format,
+            ));
+
+            return $out;
+        }
+    }
+
+    // -------------------------------------------------------------
+
+    public static function if_thumbnail($atts, $thing = null)
+    {
+        global $thisimage;
+
+        assert_image();
+
+        $x = ($thisimage['thumbnail'] == 1);
+        return isset($thing) ? parse($thing, $x) : $x;
+    }
+}
