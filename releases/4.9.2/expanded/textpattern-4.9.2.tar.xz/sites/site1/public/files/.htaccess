@@ -1,0 +1,17 @@
+# BEGIN Textpattern
+
+# Block access to directories without a default document.
+
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# Inhibit direct file downloads (display 403 Forbidden error) if desired.
+
+# RedirectMatch 403 .*
+
+# For .htaccess configuration settings and explanations, please refer to:
+# https://github.com/h5bp/server-configs-apache/blob/main/dist/.htaccess
+# https://httpd.apache.org/docs/
+
+# END Textpattern
